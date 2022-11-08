@@ -1,31 +1,23 @@
 # Rviz Meshfile Display
 
-<!-- __ProtectedRegion_begin__ packageHeader -->
 **author:** Christian Koch <christian.koch@dfki.de> 
 
 **maintainer:** Christian Koch <christian.koch@dfki.de> 
-<!-- __ProtectedRegion_end__ packageHeader -->
+
 
 Publish a meshfile to display in rviz
 
-## Description
+## Usage
 
-This package contains the following
+'''
+roslaunch rviz_meshfile_display rviz_meshfile_display meshfile:='package://path/to/meshfile.stl'
+'''
 
-**Nodes:**
- - [**Rviz Meshfile Display:**](#node-rviz-meshfile-display)
-   Publish a meshfile to display in rviz
-<!-- __ProtectedRegion_begin__ packageDescription -->
-
-<!-- __ProtectedRegion_end__ packageDescription -->
-
+All the parameter listed below can be used as launch-arguments.
 
 ## Node: Rviz Meshfile Display
 
 Publish a meshfile to display in rviz
-<!-- __ProtectedRegion_begin__ rviz_meshfile_display -->
-
-<!-- __ProtectedRegion_end__ rviz_meshfile_display -->
 
 This node provides periodically triggered update loops:
  - **main** (1 Hz) 
