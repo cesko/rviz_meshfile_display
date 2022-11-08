@@ -1,0 +1,59 @@
+<launch>
+  <arg
+    name="node_name"
+    default="rviz_meshfile_display"
+    doc="Give a name to the node"
+  />
+
+  <arg name="meshfile"                default=""      doc="location of meshfile" />
+  <arg name="frame_id"                default="world" doc="Parent frame" />
+  <arg name="maker_ns"                default=""      doc="Marker namespace" />
+  <arg name="x"                       default="0.0"   doc="Positon X" />
+  <arg name="y"                       default="0.0"   doc="Positon Y" />
+  <arg name="z"                       default="0.0"   doc="Positon Z" />
+  <arg name="R"                       default="0.0"   doc="Rotation around X (Roll)"  />
+  <arg name="P"                       default="0.0"   doc="Rotation around Y (Pitch)" />
+  <arg name="Y"                       default="0.0"   doc="Rotation around Z (Yaw)"   />
+  <arg name="angle_in_degree"         default="false" doc="When true, angles (RPY) are interpreted as degrees" />
+  <arg name="color_red"               default="0.5"   doc="red-value" />
+  <arg name="color_green"             default="0.5"   doc="green-value" />
+  <arg name="color_blue"              default="0.5"   doc="blue-value" /> 
+  <arg name="color_alpha"             default="0.5"   doc="alpha-value" /> 
+  <arg name="scale_x"                 default="1.0"   doc="" />
+  <arg name="scale_y"                 default="1.0"   doc="" /> 
+  <arg name="scale_z"                 default="1.0"   doc="" /> 
+  <arg name="use_embedded_materials"  default="false" doc="use embedded materials of meshfile" /> 
+
+  <node
+    pkg="rviz_meshfile_display"
+    type="rviz_meshfile_display"
+    output="screen"
+    name="$(arg node_name)"
+    respawn="false" >
+    
+    <remap from="visualization_marker" to="/visualization_marker" />
+
+    <param name="meshfile"                value="$(arg meshfile)" />
+    <param name="frame_id"                value="$(arg frame_id)" />
+    <param name="maker_ns"                value="$(arg maker_ns)" />
+    <param name="x"                       value="$(arg x)" />
+    <param name="y"                       value="$(arg y)" />
+    <param name="z"                       value="$(arg z)" />
+    <param name="R"                       value="$(arg R)" />
+    <param name="P"                       value="$(arg P)" />
+    <param name="Y"                       value="$(arg Y)" />
+    <param name="angle_in_degree"         value="$(arg angle_in_degree)" />
+    <param name="color_red"               value="$(arg color_red)" />
+    <param name="color_green"             value="$(arg color_green)" />
+    <param name="color_blue"              value="$(arg color_blue)" />
+    <param name="color_alpha"             value="$(arg color_alpha)" />
+    <param name="scale_x"                 value="$(arg scale_x)" />
+    <param name="scale_y"                 value="$(arg scale_y)" />
+    <param name="scale_z"                 value="$(arg scale_z)" />
+    <param name="use_embedded_materials"  value="$(arg use_embedded_materials)" />
+
+  </node>
+
+</launch>
+
+ 

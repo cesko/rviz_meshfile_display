@@ -1,0 +1,19 @@
+<package>
+  <description brief="rviz_meshfile_display">
+  Publish a meshfile to display in rviz
+  </description>
+
+  <maintainer email="christian.koch@dfki.de">Christian Koch</maintainer>
+  <author email="christian.koch@dfki.de">Christian Koch</author>
+
+  <license>TODO</license>
+  <!-- __ProtectedRegion_begin__ url -->
+  <url>http://</url>
+  <logo>http://</logo>
+  <!-- __ProtectedRegion_end__ url -->
+
+  <!-- __ProtectedRegion_begin__ deps -->
+  <depend package="catkin" />
+  <!-- __ProtectedRegion_end__ deps -->
+
+</package>
